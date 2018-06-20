@@ -1,0 +1,25 @@
+<div class="col-md-6">
+  <h2> Dept Details</h2>
+  <button class="btn btn-danger" (click)="addDept()"> Add Dept</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>NameEn</th>
+        <th>NameAr</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dept of depts">
+        <td class="hidden"></td>
+        <td>{{dept.nameEn}}</td>
+        <td>{{dept.nameAr}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteDept(dept)"> Delete</button>
+          <button class="btn btn-danger" (click)="editDept(dept)" style="margin-left: 20px;"> Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
